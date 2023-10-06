@@ -2,20 +2,18 @@
 import sys
 
 
-def printArguments():
+def cmdl():
     """Print the number of and list of arguments."""
-    counter = len(sys.argv) - 1
+    lenn = len(sys.argv) - 1
 
-    if counter == 0:
+    if lenn == 0:
         print("0 arguments.")
-    elif counter == 1:
+    elif lenn == 1:
         print("1 argument:")
     else:
-        print("{} arguments:".format(counter))
-
+        print("{} arguments:".format(lenn))
+    
     for i, arg in enumerate(sys.argv[1:], start=1):
         print("{}: {}".format(i, arg))
-
-
-if __name__ == "__main__":
-    printArguments()
+    if __name__ == "__main__":
+        cmdl()

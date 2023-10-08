@@ -1,8 +1,10 @@
-def uppercase(str):
-    upperLimit = 122
-    loweLimit = 97
-    for str in str:
-        if ord(str) >= loweLimit and ord(str) <= upperLimit:
-            str = chr(ord(str) - 32)
-        print("{}".format(str), end="")
-    print("")
+#!/usr/bin/python3
+
+lowerstart = 97
+lowerend = 122
+def to_upper(str):
+     for i in str:
+         if ord(i) >= lowerstart:
+             if ord(i) <= lowerend:
+                 cap = ord(i) - 32
+                 print(chr(cap), end="")  

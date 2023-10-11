@@ -2,10 +2,10 @@
 
 
 def multiple_returns(sentence):
-    length = len(sentence)
+    len_t = len(sentence)
     if sentence:
-        firstChar = sentence[0]
-        return (length, firstChar)
+        char = sentence[0]
+        return (len_t, char)
     else:
-        firstChar = None
-    return (length, firstChar)
+        char = None
+    return (len_t, char)

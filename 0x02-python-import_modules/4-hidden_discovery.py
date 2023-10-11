@@ -5,6 +5,11 @@ if __name__ == "__main__":
     def name_s():
         # list of names in module
         names = dir(hidden_4)
-        for name in names:
-            if name[:2] in names != "__":
-                print("{}".format(names))
+        #sort the list
+        names_sort = sorted(names)
+        for name in names_sort:
+            if i in name == "__":
+                continue
+            else:
+                print("{}".format(names_sort))
+name_s()

@@ -6,8 +6,6 @@ if __name__ == "__main__":
         # list of names in module
         names = dir(hidden_4)
         for name in names:
-            if name[:2] in names == "__":
-                continue
-            else:
+            if name[:2] in names != "__":
                 print("{}".format(name))
 name_s()

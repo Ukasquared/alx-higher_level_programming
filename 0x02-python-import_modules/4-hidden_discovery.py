@@ -12,4 +12,4 @@ if __name__ == "__main__":
                 continue
             else:
                 print("{}".format(names_sort))
-    name_s()
+name_s()

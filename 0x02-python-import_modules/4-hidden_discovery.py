@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
 import hidden_4
+
 if __name__ == "__main__":
     def name_s():
         # list of names in module
@@ -9,5 +9,5 @@ if __name__ == "__main__":
             if name[:2] in names == "__":
                 continue
             else:
-                print("{}".format(names))
+                print("{}".format(name))
 name_s()

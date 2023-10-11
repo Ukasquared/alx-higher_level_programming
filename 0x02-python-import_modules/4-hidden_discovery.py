@@ -8,7 +8,7 @@ if __name__ == "__main__":
         #sort the list
         names_sort = sorted(names)
         for name in names_sort:
-            if i in name == "__":
+            if name[:2] in names_sort == "__":
                 continue
             else:
                 print("{}".format(names_sort))

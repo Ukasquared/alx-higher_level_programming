@@ -3,8 +3,11 @@
 def roman_to_int(roman_string):
     rom_num = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
 
-    if len(roman_string) == 0 or not isinstance(roman_string, str):
-        return (0)
+    if len(roman_string) == 0:
+        return 0
+
+    if not isinstance(roman_string, str):
+        return 0
 
     result = 0
     temp_val = 0
@@ -17,4 +20,4 @@ def roman_to_int(roman_string):
             else:
                 result -= value
             temp_val = value
-        return (result)
+    return result

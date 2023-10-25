@@ -4,6 +4,6 @@
 """This square class will do nothing"""
 
 
-class square:
+class Square:
     """This class will do nothing"""
     pass

@@ -6,13 +6,13 @@ class Rectangle:
     """ instantiates an instance attributes """
     def __init__(self, width=0, height=0):
         """ initialization of attributes
-	Args:
-	    width: represent the width of rectangle
-	    height: represent the height of this rectangle
+        Args:
+            width: represent the width of rectangle
+            height: represent the height of this rectangle
         Raises:
-	    TypeError: if size is not integer
-	    ValueError: if value is less than o
-	"""
+            TypeError: if size is not integer
+            ValueError: if value is less than o
+         """
         self.__width = width
         self.__height = height
 

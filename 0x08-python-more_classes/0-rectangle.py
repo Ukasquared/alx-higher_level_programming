@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-# 0-rectangle.py
+""" defines a rectangle """
 
-""" define a rectangle """
 
 class Rectangle:
-    
-    """ this class does absolutely nothing """
+    """ this class does nothing """
     pass

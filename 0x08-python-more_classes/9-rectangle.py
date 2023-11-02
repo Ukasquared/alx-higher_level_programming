@@ -92,5 +92,6 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
+        ''' returns a new Rectangle instance with equal size '''
         new_rect = cls(size, size)
         return new_rect

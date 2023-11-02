@@ -4,6 +4,7 @@
 
 class Rectangle:
     number_of_instances = 0
+    print_symbol = "#"
     """ instantiates an instance attributes """
     def __init__(self, width=0, height=0):
         """ initialization of attributes
@@ -28,7 +29,7 @@ class Rectangle:
             return result
         for i in range(self.__height):
             for j in range(self.__width):
-                result += "#"
+                result += type(self).print_symbol
             if i < (self.__height - 1):
                 result += '\n'
         return result

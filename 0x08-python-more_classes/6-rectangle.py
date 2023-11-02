@@ -3,10 +3,9 @@
 
 
 class Rectangle:
-    """ class attribute"""
+    """ instantiates an instance attributes """
     number_of_instances = 0
 
-    """ instantiates an instance attributes """
     def __init__(self, width=0, height=0):
         """ initialization of attributes
         Args:

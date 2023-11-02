@@ -3,7 +3,6 @@
 
 
 class Rectangle:
-    """ class attribute"""
     number_of_instances = 0
     """ instantiates an instance attributes """
     def __init__(self, width=0, height=0):
@@ -20,7 +19,6 @@ class Rectangle:
         type(self).number_of_instances += 1
 
     def __del__(self):
-        """ deletes an instance"""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
 

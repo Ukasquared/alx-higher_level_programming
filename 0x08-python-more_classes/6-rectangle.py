@@ -5,12 +5,14 @@
 class Rectangle:
     """ class attribute"""
     number_of_instances = 0
+
     """ instantiates an instance attributes """
     def __init__(self, width=0, height=0):
         """ initialization of attributes
         Args:
             width: represent the width of rectangle
             height: represent the height of this rectangle
+            number_of_instances: number of instances
         Raises:
             TypeError: if size is not integer
             VealueError: if value is less than o

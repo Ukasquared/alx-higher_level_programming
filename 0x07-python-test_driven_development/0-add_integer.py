@@ -5,34 +5,12 @@
 
 def add_integer(a, b=98):
     """adds two integers"""
-    if a is None:
+    if not isinstance(a, (int, float)) or isinstance(a, bool):
         raise TypeError("a must be an integer")
-    if b is None:
+    if not isinstance(b, (int, float)) or isinstance(b, bool):
         raise TypeError("b must be an integer")
-    if not a:
-        raise TypeError("a must be an integer")
-    if not b:
-        raise TypeError("b must be an integer")
-    if not isinstance(a, (int, float)):
-        raise TypeError("a must be an integer")
-    if not isinstance(b, (int, float)):
-        raise TypeError("b must be an integer")
-    if isinstance(a, bool):
-        raise TypeError("a must be an integer")
-    if isinstance(b, bool):
-        raise TypeError("b must be an integer")
-    if a is float('inf') or a is float('-inf'):
-        raise TypeError("a must be an integer")
-    if b is float('inf') or b is float('-inf'):
-        raise TypeError("b must be an integer")
-    if a + 1 == a:
-        raise TypeError("a must be an integer")
-    if b + 1 == b:
-        raise TypeError("b must be an integer")
-    if isinstance(a, float):
-        a = int(a)
-    if isinstance(b, float):
-        b = int(b)
+    a = int(a)
+    b = int(b)
     return a + b
 
     if __name__ == "__main__":

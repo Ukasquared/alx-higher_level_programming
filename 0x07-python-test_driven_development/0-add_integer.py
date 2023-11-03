@@ -5,9 +5,9 @@
 
 def add_integer(a, b=98):
     """adds two integers"""
-    if a == None:
+    if a is None:
         raise TypeError("a must be an integer")
-    if b == None:
+    if b is None:
         raise TypeError("b must be an integer")
     if not a:
         raise TypeError("a must be an integer")
@@ -21,9 +21,9 @@ def add_integer(a, b=98):
         raise TypeError("a must be an integer")
     if isinstance(b, bool):
         raise TypeError("b must be an integer")
-    if a == float('inf'):
+    if a is float('inf') or is float('-inf'):
         raise TypeError("a must be an integer")
-    if b == float('inf'):
+    if b is float('inf') or is float('-inf'):
         raise TypeError("b must be an integer")
     if a + 1 == a:
         raise TypeError("a must be an integer")

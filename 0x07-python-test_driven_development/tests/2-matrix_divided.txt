@@ -12,6 +12,9 @@ First import ``matrix-divided`` from the ``2-matrix-divided`` module:
 	matrix value
  	>>> matrix = [[1, 2, 3], [4, 5, 6]]
 
+	>>> matrix_divided(matrix, 3)
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
 	divide matix by 0
 	>>> matrix_divided(matrix, 0)
 	Traceback (most recent call last):
@@ -63,3 +66,8 @@ First import ``matrix-divided`` from the ``2-matrix-divided`` module:
 	Traceback (most recent call last):
 	...
 	TypeError: Each row of the matrix must have the same size
+
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], "wqq")
+	Traceback (most recent call last):
+	...
+	TypeError: div must be a number

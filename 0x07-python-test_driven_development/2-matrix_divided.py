@@ -25,9 +25,9 @@ def matrix_divided(matrix, div):
     for i in range(len(matrix)):
         matrix_val.append([])
         if not oldlen == len(matrix[i]):
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError("matrix must have each row with the same size")
         for j in range(len(matrix[i])):
             if not isinstance(matrix[i][j], (float, int)):
-                TypeError("matrix must be a matrix (list of lists) of integer/floats")
+               raise TypeError("matrix must be a matrix (list of lists) of integer/floats")
             matrix_val[i].append(round(matrix[i][j] / div, 2))
     return (matrix_val)

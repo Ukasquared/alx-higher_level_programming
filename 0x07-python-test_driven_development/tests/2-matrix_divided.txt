@@ -1,0 +1,49 @@
+`This is a test case for modulle that divides a list of list"
+----------------------
+
+The matrix division moodule
+ 
+Usinng ``matrix division``
+
+First import ``matrix-divided`` from the ``2-matrix-divided`` module:
+
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+ 
+	matrix value
+ 	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+
+	divide matix by 0
+	>>> matrix_divided(matrix, 0)
+	Traceback (most recent call last):
+	...
+	ZeroDivisionError: division by zero
+
+	empty argument
+ 	>>> matrix_divided()
+	Traceback (most recent call last):
+	...
+	TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+	one argument is passed
+	>>> matrix_divided(matrix, None)
+	Traceback (most recent call last):
+	...
+	TypeError: div must be a number
+
+	one argument is passed
+	>>> matrix_divided(None, 5)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integer/floats
+
+	dividing a string
+	>>> matrix_divided("string", 5)
+ 	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integer/floats
+
+	dividing a tuple
+	>>> matrix_divided((1, 2, 3), 5)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integer/floats

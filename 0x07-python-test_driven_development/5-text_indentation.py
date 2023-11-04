@@ -15,7 +15,8 @@ def text_indentation(text):
         else:
             new_text += text[i]
             new_text += "\n\n"
-            i += 1
+            if text[i + 1] == " ":
+                i += 1
         i += 1
     print("{}".format(new_text))
 

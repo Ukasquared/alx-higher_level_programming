@@ -34,19 +34,19 @@ First import ``matrix-divided`` from the ``2-matrix-divided`` module:
 	>>> matrix_divided(None, 5)
 	Traceback (most recent call last):
 	...
-	TypeError: matrix must be a matrix (list of lists) of integer/floats
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 	dividing a string
 	>>> matrix_divided("string", 5)
  	Traceback (most recent call last):
 	...
-	TypeError: matrix must be a matrix (list of lists) of integer/floats
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 	dividing a tuple
 	>>> matrix_divided((1, 2, 3), 5)
 	Traceback (most recent call last):
 	...
-	TypeError: matrix must be a matrix (list of lists) of integer/floats
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 	List of mixed data types
 	>>> matrix = [
@@ -56,10 +56,10 @@ First import ``matrix-divided`` from the ``2-matrix-divided`` module:
 	>>> matrix_divided(matrix, 3)
 	Traceback (most recent call last):
 	...
-	TypeError: matrix must be a matrix (list of lists) of integer/floats
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 	list of inconsistent row
 	>>> matrix_divided([[3, 9], [12, 15, 3]], 5)
 	Traceback (most recent call last):
 	...
-	TypeError: matrix must have each row with the same size
+	TypeError: Each row of the matrix must have the same size

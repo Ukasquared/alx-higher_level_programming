@@ -10,7 +10,8 @@ def text_indentation(text):
     i = 0
     new_text = ""
     while i < len(text):
-        if (not text[i] == '.' and not text[i] == ':' and not text[i] == '?'):
+        if (not text[i] == '.' and not text[i] == ':' 
+		and not text[i] == "\n" and not text[i] == '?'):
             new_text += text[i]
         else:
             new_text += text[i]

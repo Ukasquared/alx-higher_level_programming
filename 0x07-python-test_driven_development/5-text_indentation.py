@@ -9,8 +9,8 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     i = 0
     while i < len(text):
-        if (not text[i] == '.' and not text[i] == ':' 
-		 and not text[i] == '?'):
+        if (not text[i] == '.' and not text[i] == ':'
+           and not text[i] == '?' and not text[i] == "\n"):
             print(text[i], end="")
         else:
             print(text[i])
@@ -18,4 +18,3 @@ def text_indentation(text):
             if text[i + 1] == " ":
                 i += 1
         i += 1
-

@@ -3,10 +3,11 @@
 import unittest
 from models.rectangle import Rectangle
 
+
 class TestRectangle(unittest.TestCase):
     def setUp(self):
-      self.r1 = Rectangle(10, 2)
-      self.r4 = Rectangle(4, 5, 6, 18, 2)
+        self.r1 = Rectangle(10, 2)
+        self.r4 = Rectangle(4, 5, 6, 18, 2)
 
     def test__init__(self):
         self.assertEqual(self.r1.id, 1)

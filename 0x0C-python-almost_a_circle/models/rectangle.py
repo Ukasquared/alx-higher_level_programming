@@ -13,7 +13,7 @@ class Rectangle(Base):
         self.x = x
         self.y = y
         super().__init__(id)
-    
+
     @property
     def width(self):
         """ gets the private attribute """
@@ -23,7 +23,7 @@ class Rectangle(Base):
     def width(self, value):
         """ sets the private attribute """
         if type(value) is not int:
-             raise TypeError("width must be an integer")
+            raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be < 0")
         self.__width = value
@@ -67,7 +67,7 @@ class Rectangle(Base):
         if type(yvalue) is not int:
             raise TypeError("y must be an integer")
         if yvalue < 0:
-             raise ValueError("y must be >= 0")
+            raise ValueError("y must be >= 0")
         self.__y = yvalue
 
     def area(self):
@@ -76,14 +76,16 @@ class Rectangle(Base):
 
     def display(self):
         """ display to the user """
-        for i in range(self.y): print()
+        for i in range(self.y):
+            print()
         letter = "#"
         for i in range(self.height):
             print("{}{}".format(" " * self.x, letter * self.width))
 
     def __str__(self):
         """ display to the user """
-        return (f"[{type(self).__name__}] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}")
+        return (f"[{type(self).__name__}] ({self.id}) "
+                f"{self.x}/{self.y} - {self.width}/{self.height}")
 
     def update(self, *args, **kwargs):
         if args:

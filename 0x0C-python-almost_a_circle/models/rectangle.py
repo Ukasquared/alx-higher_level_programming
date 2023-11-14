@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-from models.base import Base
-
 """ inherit the base module """
+
+
+from models.base import Base
 
 
 class Rectangle(Base):
     """ creates a rectangle """
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """initialize the instance attributes """
         self.width = width
@@ -71,7 +73,8 @@ class Rectangle(Base):
         self.__y = yvalue
 
     def area(self):
-        """ compute the area """
+        """ compute the area, and return to user
+        after validation """
         return self.__width * self.__height
 
     def display(self):
@@ -88,6 +91,8 @@ class Rectangle(Base):
                 f"{self.x}/{self.y} - {self.width}/{self.height}")
 
     def update(self, *args, **kwargs):
+        """ replace the value with a new value and then
+        validation """
         if args:
             attributes = ["id", "width", "height", "x", 'y']
             for i in range(len(args)):

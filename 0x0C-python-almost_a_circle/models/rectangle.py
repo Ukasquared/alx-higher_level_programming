@@ -103,6 +103,7 @@ class Rectangle(Base):
                     setattr(self, key, value)
 
     def to_dictionary(self):
+        """ returns dictionary data type of attributes """
         return {
             'id': self.id,
             'width': self.width,

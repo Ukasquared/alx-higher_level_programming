@@ -32,8 +32,9 @@ class Base:
         with open(file_name, 'w') as json_file:
             if type(list_objs) is None or len(list_objs) == 0:
                 json_file.write("[]")
-            list_dicts = [dicts.to_dictionary() for dicts in list_objs]
-            json_file.write(cls.to_json_string(list_dicts))
+            else:
+                list_dicts = [dicts.to_dictionary() for dicts in list_objs]
+                json_file.write(cls.to_json_string(list_dicts))
 
     @staticmethod
     def from_json_string(json_string):

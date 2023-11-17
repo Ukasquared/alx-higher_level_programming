@@ -1,8 +1,8 @@
 #!/usr/bin/python3
+ """ module testbase for base.py"""
 
 import unittest
 from models.base import Base
-""" modeule testbase """
 
 
 class testbase(unittest.TestCase):

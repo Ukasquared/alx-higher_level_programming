@@ -30,7 +30,7 @@ class Base:
         and writes the data to a file """
         file_name = cls.__name__ + ".json"
         with open(file_name, 'w') as json_file:
-            if type(list_objs) is None or len(list_objs) == 0:
+            if list_objs is None or len(list_objs) == 0:
                 json_file.write("[]")
             else:
                 list_dicts = [dicts.to_dictionary() for dicts in list_objs]

@@ -13,7 +13,7 @@ class Square(Rectangle):
         """ return a readable information about
         the object """
         return (f"[{type(self).__name__}] ({self.id}) "
-                f"{self.x}/{self.y} {self.width}")
+                f"{self.x}/{self.y} - {self.size}")
 
     @property
     def size(self):
@@ -43,7 +43,13 @@ class Square(Rectangle):
         """ update the attributes of the
         instance
         """
-        super().update(*args, **kwargs)
+        attr = ['id', 'size', 'x', 'y']
+        if args:
+            for i, value in enumerate(args):
+                setattr(self, attr[i], value)
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """ converts list to dictionary
@@ -51,6 +57,6 @@ class Square(Rectangle):
         return {
             'id': self.id,
             'x': self.x,
-            'size': self.width,
+            'size': self.size,
             'y': self.y
             }

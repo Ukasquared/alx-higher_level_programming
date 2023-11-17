@@ -18,7 +18,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """ this method converts list of
         of dictionaries to json string """
-        if type(list_dictionaries) is None:
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         json_string = json.dumps(list_dictionaries)
         return json_string
@@ -30,7 +30,7 @@ class Base:
         and writes the data to a file """
         file_name = cls.__name__ + ".json"
         with open(file_name, 'w') as json_file:
-            if type(list_objs) is None:
+            if type(list_objs) is None or len(list_objs) == 0:
                 json_file.write("[]")
             list_dicts = [dicts.to_dictionary() for dicts in list_objs]
             json_file.write(cls.to_json_string(list_dicts))
@@ -48,7 +48,11 @@ class Base:
         """ creates a new instance that has
         access to all the attributes and method
         of the class """
-        new_instance = cls(1, 3, 5, 5)
+        if dictionary and len(dictionary) != 0:
+            if cls.__name__ == "Rectangle":
+                new_instance = cls(1, 2)
+            else:
+                new_instance = cls(1)
         new_instance.update(**dictionary)
         return new_instance
 

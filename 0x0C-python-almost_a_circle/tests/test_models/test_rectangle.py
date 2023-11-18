@@ -9,8 +9,10 @@ class TestRectangle(unittest.TestCase):
         self.r1 = Rectangle(10, 2)
         self.r4 = Rectangle(4, 5, 6, 18, 2)
 
-    def test__init__(self):
+    def test__no_id_(self):
         self.assertEqual(self.r1.id, 1)
+
+    def test__width_no_id(self):
         self.assertEqual(self.r1.width, 10)
         self.assertEqual(self.r1.height, 2)
         self.assertEqual(self.r4.width, 4)

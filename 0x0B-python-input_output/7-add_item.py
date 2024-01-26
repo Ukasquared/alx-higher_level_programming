@@ -17,8 +17,10 @@ def from_py_to_json():
         old_list = load_from_json_file(filename)
     new_list = [argv[i] for i in range(1, len(argv))]
     if old_list:
-        new_list.extend(old_list)
-    save_to_json_file(new_list, filename)
+        old_list.extend(new_list)
+        save_to_json_file(old_list, filename)
+    else:
+        save_to_json_file(new_list, filename)
 
 
 from_py_to_json()

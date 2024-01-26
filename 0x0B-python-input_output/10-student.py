@@ -17,13 +17,10 @@ class Student:
         """
         to_dict = self.__dict__
         to_dict1 = {}
-        if attrs and len(attrs) == 0:
-            return attrs
-        if attrs:
+        if attrs is not None:
             for key, value in to_dict.items():
                 for attr in attrs:
                     if attr == key:
                         to_dict1[attr] = value
-            if to_dict1:
-                return to_dict1
+            return to_dict1
         return to_dict

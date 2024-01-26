@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ student moduler"""
-import json
 
 
 class Student:

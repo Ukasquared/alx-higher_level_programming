@@ -17,6 +17,8 @@ class Student:
         """
         to_dict = self.__dict__
         to_dict1 = {}
+        if attrs and len(attrs) == 0:
+            return attrs
         if attrs:
             for key, value in to_dict.items():
                 for attr in attrs:

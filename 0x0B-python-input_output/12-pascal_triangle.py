@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ pascal triangle module"""
 
+
 def pascal_triangle(n):
     """ pascal triangle """
     aggr_list = []

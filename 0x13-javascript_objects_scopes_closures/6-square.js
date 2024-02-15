@@ -6,7 +6,7 @@ class Square extends Squar {
     for (let i = 0; i < this.height; i++) {
       let string = '';
       for (let j = 0; j < this.width; j++) {
-        string += (c) ? 'C' : 'X';
+        string += (c) ? c : 'X';
       }
       console.log(string);
     }

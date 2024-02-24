@@ -18,4 +18,4 @@ if __name__ == "__main__":
     session.commit()
     query = session.query(State).all()
     for result in query:
-        print(f"{result.id}: {result.name}")
+        print(f"{result.id}")

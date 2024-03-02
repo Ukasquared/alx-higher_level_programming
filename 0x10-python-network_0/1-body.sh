@@ -9,12 +9,12 @@ fi
 url="$1"
 response=$(curl -s -i "$url")
 
-# Extract the HTTP status code
+# store the HTTP status code
 http_status=$(echo "$response" | awk '/^HTTP/ {print $2}')
 
 # Check if the status code is 200
 if [ "$http_status" -eq 200 ]; then
     # Extract and display the response body
     response_body=$(echo "$response" | awk '/^$/{flag=1; next} {if (flag) print}')
-    echo "$response_body"
+    echo "$response_body\n"
 fi

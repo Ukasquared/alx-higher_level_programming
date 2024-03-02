@@ -10,7 +10,7 @@ fi
 url = "$1"
 
 # obtain the byte of the body of response in a variable
-response = $(curl -s -o dev/null -w "%{size_download}" "$url"}
+response = $(curl -s -o dev/null -w "%{size_download}" "$url"})
 
 # print response if curl was succesful
 if [$? -ne 0 ]; then

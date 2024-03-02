@@ -1,10 +1,5 @@
 #!/bin/bash
 # Bash script that takes in a URL, sends a request to that URL, and displays the size of the body of the response
-# check if the argument is empty
-if [ -z "$1" ]; then
-	echo "Usage: $0 <URL>"
-	exit
-fi
 
 # if the first argument is true store the url
 url="$1"

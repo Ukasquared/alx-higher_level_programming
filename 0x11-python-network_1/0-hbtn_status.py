@@ -2,7 +2,9 @@
 """ urllib module """
 from urllib import request
 
+
 def request_response():
+    """ http request """
     with request.urlopen('https://alx-intranet.hbtn.io/status') as response:
         content = response.read()
         decode_content = content.decode('utf-8')

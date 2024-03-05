@@ -7,7 +7,7 @@ from sys import argv
 if __name__ == '__main__':
     url = 'http://0.0.0.0:5000/search_user'
     q = ""
-    if argv[2]:
+    if len(argv) > 2:
         q = argv[2]
     new_data = {'q': q}
     response = requests.post(url, data=new_data)

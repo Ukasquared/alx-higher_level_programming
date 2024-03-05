@@ -11,5 +11,6 @@ def request_response():
         print(f"Body response:\n\t- type: {type(content)}\n\t\
 - content: {content}\n\t- utf8 content: {decode_content}")
 
+
 if __name__ == "__main__":
     request_response()

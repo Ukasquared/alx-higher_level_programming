@@ -10,8 +10,8 @@ if __name__ == '__main__':
     if len(argv) > 2:
         q = argv[1]
     new_data = {'q': q}
-    response = requests.post(url, data=new_data)
     try:
+        response = requests.post(url, data=new_data)
         json_text = response.json()
         if not json_text:
             print("No result")

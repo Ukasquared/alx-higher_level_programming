@@ -18,4 +18,4 @@ if __name__ == '__main__':
         else:
             print("[{}] {}".format(json_text['id'], json_text['name']))
     except ValueError:
-        print("not a JSON")
+        print("Not a valid JSON")

@@ -16,6 +16,6 @@ if __name__ == '__main__':
         if not json_text:
             print("No result")
         else:
-            print("[{}] {}".format(json_text['id'], json_text['name'])
+            print("[{}] {}".format(json_text['id'], json_text['name']))
     except Exception:
         print("not a valid JSON")

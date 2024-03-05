@@ -7,11 +7,11 @@ from sys import argv
 if __name__ == "__main__":
     # gets the variables
     url = argv[1]
-    post_data = {'email': argv[2]}
+    post_data = {"email": argv[2]}
     # returns an object from post request
     try:
         response = requests.post(url, data=post_data)
         # print the content
-        print(content.text)
+        print(response.text)
     except requests.ConnectionError as e:
-        print("",end="")
+        print(e)

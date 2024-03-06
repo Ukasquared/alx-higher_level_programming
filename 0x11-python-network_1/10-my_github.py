@@ -7,6 +7,6 @@ import requests
 if __name__ == "__main__":
     name = argv[1]
     PAT = argv[2]
-    h_data = {"Authorization": PAT}
+    h_data = {"Authorization": f"Bearer {PAT}"}
     response = requests.get(f"https://api.github.com/{name}", headers = h_data)
     print(response.headers.get('id'))

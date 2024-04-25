@@ -12,6 +12,6 @@ request(url, (error, response, body) => {
   }
   const movie = JSON.parse(body).results;
   const wedge = movie.filter(movie => movie.characters.includes(
-    'https://swapi-api.alx-tools.com/api/people/14/'));
+    'https://swapi-api.alx-tools.com/api/people/18/'));
   console.log(wedge.length);
 });
